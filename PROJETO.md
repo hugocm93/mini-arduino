@@ -11,12 +11,12 @@ Para o projeto final, eu usaria o relay com o ventilador, e o teclado numérico 
 
 
 Sensores:
-  -Sensor de temperatura
+  *Sensor de temperatura
 
 Atuadores:
-  -LED RGB
-  -Push-button
-  -LED verde
+  *LED RGB
+  *Push-button
+  *LED verde
 
 Implementação: C
 
