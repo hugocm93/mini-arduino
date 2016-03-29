@@ -10,13 +10,9 @@ Visto que projeto final vai ser uma extensão de um mini-projeto, pensei em faze
 Para o projeto final, eu usaria o relay com o ventilador, e o teclado numérico para definir um tempo personalizado, e o display para exibir opções e exibir a contagem regressiva do cronômetro.
 
 
-Sensores:
-  *Sensor de temperatura
+Sensores: Sensor de temperatura
 
-Atuadores:
-  *LED RGB
-  *Push-button
-  *LED verde
+Atuadores: LED RGB; Push-button; LED verde
 
 Implementação: C
 
