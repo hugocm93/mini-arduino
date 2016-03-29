@@ -1,7 +1,7 @@
 
 Projeto Final
 
-Pensei em fazer um projeto usando um sensor de temperatura, um teclado numérico, um display, alguns push-buttons e um relay para controlar um ventilador. A idéia é criar um timer para desligar o ventilador automaticamente. O teclado receberia o tempo em segundos, e o display mostraria o count-down e eventuais mensagens para o usuário navegar no menu. No menu também teria a opção de desligar o ventilador automaticamente conforme a temperatura ambiente. Os push-buttons seriam para escolher a função. Talvez um módulo bluetooth para controlar com o smartphone.
+Pensei em fazer um projeto usando um sensor de temperatura, um teclado numérico, um display, alguns push-buttons e um relay para controlar um ventilador. A idéia é criar um timer para desligar o ventilador automaticamente. O teclado receberia o tempo em segundos, e o display mostraria o count-down e eventuais mensagens para o usuário navegar no menu. No menu também teria a opção de desligar o ventilador automaticamente conforme a temperatura ambiente. Os push-buttons seriam para escolher a função. As funções poderam ser controladas por bluetooth.
 
 
 Proposta de Mini-projeto
