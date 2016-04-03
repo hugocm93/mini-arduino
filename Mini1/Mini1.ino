@@ -25,14 +25,15 @@ int oldValue;
 int option;
 int runtime;
 bool lastState;
+bool currentState;
 
 void rgb(char* color);
 void buttonChanged(bool state);
-void runSetup();
 
 void setup() {
   Serial.begin(9600);
   pinMode(GREEN_LED, OUTPUT);
+  pinMode(RGB_LED_R, OUTPUT);
   pinMode(RGB_LED_G, OUTPUT);
   pinMode(RGB_LED_B, OUTPUT);
   pinMode(SENSOR, INPUT);
@@ -43,6 +44,7 @@ void setup() {
   option = -1;
   runtime = -1;
   lastState = LOW;
+  state = LOW;
 }
 
 void loop() {
@@ -52,13 +54,13 @@ void loop() {
     lastUpdateTime = millis();
   }
 
-    bool aux = digitalRead(BUTTON1);
-    if (aux != lastState) {
-      lastState = aux;
-      buttonChanged(aux);
-    }
+  bool aux = digitalRead(BUTTON1);
+  if (aux != lastState) {
+    lastState = aux;
+    buttonChanged(aux);
+  }
 
-    Serial.println(option);
+  Serial.println(option);
 
   switch (option) {
     case 1:
@@ -81,7 +83,7 @@ void loop() {
         digitalWrite(GREEN_LED, HIGH);
       }
       break;
-      
+
     default:
       rgb("green");
   }
@@ -106,20 +108,19 @@ void rgb(char* color) {
   }
 }
 
-void buttonChanged(bool state){
-  if(state){
-    option = 1;
-    runtime = -1;
-  }
-  else{
-    option = 2;
-    if(runtime == -1){
-      runSetup();
+void buttonChanged(bool state) {
+  if (state) {
+    if (currentState) {
+      option = 1;
+      runtime = -1;
     }
+    else {
+      option = 2;
+      if (runtime == -1) {
+        runtime = millis();
+      }
+    }
+    currentState = !currentState;
   }
-}
-
-void runSetup(){
-  runtime = millis();
 }
 
